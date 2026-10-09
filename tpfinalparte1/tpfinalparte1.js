@@ -6,6 +6,12 @@ let contadorFrames = 0;
 let imgLogo;
 let imgInicio;
 let imgOficina;
+let imgAlmacen;
+let imgAlmacenLlamas;
+let imgDiscoteca;
+let imgBodega;
+let imgCallejon;
+let imgDepa;
 
 // Esto es para maquina de Estados
 let estadoPantalla = 0;
@@ -16,6 +22,12 @@ function preload() {
   imgFondo = loadImage('assets/fondo_ciudad.jpg');
   imgLogo = loadImage('assets/logo.png'); 
   imgOficina = loadImage('assets/fondo_oficina.jpg'); 
+  imgAlmacen = loadImage ('assets/fondo_almacen.png');
+  imgAlmacenLlamas = loadImage ('assets/fondo_almacen_en_llamas.png');
+  imgDiscoteca = loadImage ('assets/fondo_discoteca.png');
+  imgBodega = loadImage ('assets/fondo_bodega.jpg');
+  imgCallejon = loadImage ('assets/fondo_callejón.png');
+  imgDepa = loadImage ('assets/fondo_departamento.png');
 
   for (let i = 0; i < totalFramesLluvia; i++) {
     framesLluvia[i] = loadImage('assets/lluvia_' + i + '.png');
