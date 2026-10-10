@@ -21,11 +21,11 @@ let nombresOficina = [
 // Arreglos con textos de la bodega
 let dialogoBodega = [
   "(Marquez llega a la ubicacion de la victima)",
-  "Llegue. El olor a humedad y metal oxidado es insoportable.",
-  "Ahi esta... Lucas. La silueta de tiza y los marcadores de evidencia cuentan una historia que debo descifrar.",
-  "Muy bien, tendre que empezar a averiguar que ocurrio aqui.",
-  "Entre las pertenencias de Lucas encontre la direccion de su novio Eric y una tarjeta del club donde trabajaba como Barman...",
-  "Tengo poco tiempo. ¿Por donde me conviene empezar la investigacion?"
+  "Llegué. El olor a humedad y metal oxidado es insoportable.",
+  "Ahí está... Lucas. La silueta de tiza y los marcadores de evidencia cuentan una historia que debo descifrar.",
+  "Muy bien, tendré que empezar a averiguar que ocurrió aquí.",
+  "Entre las pertenencias de Lucas encontré la direccion de su novio Eric y una tarjeta del club donde trabajaba como Barman...",
+  "Tengo poco tiempo. ¿Por dónde me conviene empezar la investigacion?"
 ];
 let nombresBodega = [
   "NARRADOR",
