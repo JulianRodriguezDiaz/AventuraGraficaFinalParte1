@@ -13,10 +13,10 @@ let imgBodega;
 let imgCallejon;
 let imgDepa;
 
-// Esto es para maquina de Estados
+// Esto es para maquina de Estados.
 let estadoPantalla = 0;
 
-// Aca se cargan las imagenes
+// Aca se cargan las imagenes.
 function preload() {
   imgInicio = loadImage('assets/start.png');
   imgFondo = loadImage('assets/fondo_ciudad.jpg');
@@ -26,7 +26,7 @@ function preload() {
   imgAlmacenLlamas = loadImage ('assets/fondo_almacen_en_llamas.png');
   imgDiscoteca = loadImage ('assets/fondo_discoteca.png');
   imgBodega = loadImage ('assets/fondo_bodega.jpg');
-  imgCallejon = loadImage ('assets/fondo_callejón.png');
+  imgCallejon = loadImage ('assets/fondo_callejon.png');
   imgDepa = loadImage ('assets/fondo_departamento.png');
 
   for (let i = 0; i < totalFramesLluvia; i++) {
@@ -41,49 +41,28 @@ function setup() {
 function draw() {
   background(0);
 
-//Maquinita de estados
-  if (estadoPantalla == 0) {
-    dibujarPantallaInicio();
-  } else if (estadoPantalla == 1) {
-    dibujarEscena1();
-  }
+  //Maquinita de estados.
+   maquinaEstados();
 }
 
-//funcion para todo lo que es la primera pantalla y que este ordenadito
-function dibujarPantallaInicio() {
-//fondo y lluvia solo en pantalla 0
-  image(imgFondo, 0, 0);
-
-  contadorFrames++;
-  if (contadorFrames >= 4) {
-    frameActual = (frameActual + 1) % totalFramesLluvia;
-    contadorFrames = 0;
-  }
-
-  if (framesLluvia[frameActual]) {
-    image(framesLluvia[frameActual], 0, 0);
-  }
-
-//esto seria el logo
-  imageMode(CENTER);
-  image(imgLogo, width / 2, 120);
-  imageMode(CORNER);
-
-//esto seria el boton
-  image(imgInicio, 300, 280, 200, 100);
-}
-
-//Pasa a otra pantalla en este caso Oficina
-function dibujarEscena1() {
-  image(imgOficina, 0, 0, width, height);
-}
-
-//Boton
-function mousePressed() {
-  if (estadoPantalla == 0) {
-
-    if (mouseX > 300 && mouseX < 500 && mouseY > 280 && mouseY < 380) {
-      estadoPantalla = 1;
+//funcion para todo lo que es la primera pantalla y que este ordenadito.
+function dibujarPantallaInicio(imagen1, imagen2, imagen3) {
+  //fondo y lluvia solo en pantalla 0.
+    image(imagen1, 0, 0);
+  
+    contadorFrames++;
+    if (contadorFrames >= 4) {
+      frameActual = (frameActual + 1) % totalFramesLluvia;
+      contadorFrames = 0;
     }
+    if (framesLluvia[frameActual]) {
+      image(framesLluvia[frameActual], 0, 0);
+    }
+    
+  //esto seria el logo.
+    imageMode(CENTER);
+    image(imagen2, width / 2, 120);
+    imageMode(CORNER);
+  //esto seria la imagen del boton.
+    image(imagen3, 300, 280, 200, 100);
   }
-}
