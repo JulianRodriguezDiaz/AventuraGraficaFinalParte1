@@ -24,5 +24,15 @@ function maquinaEstados() {
     dibujarFinalBueno(); // Opcion de defenderse / pelear
   } else if (estadoPantalla == 11) {
     dibujarFinalMalo(); // Opcion de escapar / muerte
+  } else if (estadoPantalla == 12) {
+    dibujarEscenaAlmacen(); // Muestra el almacen y su interfaz de texto
+  } else if (estadoPantalla == 13) {
+    dibujarEscenaAlmacenSigiloso(); // Almacen pero de manera sigiloza
+  } else if (estadoPantalla == 14) {
+  dibujarEscenaAlmacenLlamas(); //Almacen en llamas
+  } else if (estadoPantalla == 15) {
+    dibujarPantallaDecisionAlmacen(); // Muestra el Almacen con los botones de decisión
+  } else if (estadoPantalla == 16) {
+    dibujarFinalNeutral(); // Muestra el Final Neutral
   }
 }
