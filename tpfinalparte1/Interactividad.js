@@ -89,7 +89,6 @@ function mousePressed() {
       } else {
         estadoPantalla = 9;
         maxTexto = 0;
-        indiceTexto = 0;
       }
     }
   }
@@ -117,10 +116,10 @@ else if (estadoPantalla == 10) {
   }
   else if (estadoPantalla == 11) {
     if (mouseX > 100 && mouseX < 700 && mouseY > 300 && mouseY < 450) {
-      if (indiceTexto < dialogoFinalMalos.length - 1) { 
+      if (indiceTexto < dialogoFinalMalo.length - 1) { 
         indiceTexto++;
         maxTexto = 0;
       }
     }
   }
-  }
+ }

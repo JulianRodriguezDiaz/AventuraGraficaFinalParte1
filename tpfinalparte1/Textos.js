@@ -55,7 +55,6 @@ let dialogoDepartamento = [
   "Bien, iré a investigar a ese lugar. Cualquier cosa que averigues no dudes en avisar, adiós.",
   "(Marquez se dirige al almacen abandonado.)"
 ];
-
 let nombresDepartamento = [
   "NARRADOR",
   "ERIC BENJAMÍN",
@@ -93,7 +92,6 @@ let dialogoDiscoteca = [
   "¿V-Vio? Se lo dije, no tienen nada contra de m-mí...y con su permiso, seguiré trabajando.",
   "(Yahir va a atender a dos clientes, Marquez aprovecha la informacíon para regresar a la bodega y buscar pistas de la pistola.)"
 ];
-
 let nombresDiscoteca = [
   "NARRADOR",
   "NARRADOR",
@@ -109,8 +107,9 @@ let nombresDiscoteca = [
   "NARRADOR",
   "MARQUEZ",
   "YAHIR",
-  "NARRADOR"
+  "NARRADOR",
 ];
+
  //Arreglos bodega 2
 let dialogoSegundaBodega = [
   "Volví a la bodega... Tengo que revisar cada rincón otra vez. No se me puede escapar nada.",
@@ -118,13 +117,13 @@ let dialogoSegundaBodega = [
   "(Marquez descubre la pistola en la bolsa de basura que estaba cerca del cuerpo y rastros de sangre muy pequeños que dan al callejón del faro.)",
   "Con estas nuevas pistas, ahora sí sé exactamente hacia dónde tengo que ir.",
 ];
-
 let nombresSegundaBodega = [
   "MARQUEZ",
   "MARQUEZ",
   "NARRADOR",
-  "MARQUEZ"
+  "MARQUEZ",
 ];
+
  //Arreglos Callejon
 let dialogoCallejon = [
   "El callejón está oscuro y silencioso. Los vidrios rotos crujen bajo los zapatos del detective.",
@@ -137,7 +136,6 @@ let dialogoCallejon = [
   "(Yahir corre hacia el detective con un bate para atacarlo).",
   "¡DETENTE! (¡Oh por Dios! ¿Qué hago?)."
 ];
-
 let nombresCallejon = [
   "NARRADOR",
   "NARRADOR",
@@ -149,21 +147,21 @@ let nombresCallejon = [
   "NARRADOR",
   "MARQUEZ"
 ];
+
  //Arreglos final bueno
  let dialogoFinalBueno = [
- "FINAL BUENO: Marquez ganó el combate contra Yahir. Finalmente, el asesino es atrapado y llevado a juicio, donde se descubre que Yahir fue el asesino de Lucas".
- 
+ "FINAL BUENO: Marquez ganó el combate contra Yahir. Finalmente, el asesino es atrapado y llevado a juicio, donde se descubre que Yahir fue el asesino de Lucas."
 ];
  let nombresFinalBueno = [
  "NARRADOR"
- ]
+ ];
+ 
   //Arreglos final malo
  let dialogoFinalMalo = [
  "FINAL MALO: Marquez corre desesperado buscando una salida. El aire le falta y las piernas no le responden más. En un segundo de debilidad, Yahir lo sorprende por la espalda y lo ataca brutalmente. El asesino acaba con el detective y escapa impune, dejando atrás la escena del crimen."
- 
 ];
  let nombresFinalMalo = [
  "NARRADOR"
- ]
+ ];
  
  
