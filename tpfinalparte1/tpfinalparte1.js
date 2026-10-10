@@ -16,6 +16,9 @@ let imgBodega;
 let imgCuadroDecision;
 let imgDepartamento;
 let imgDiscoteca;
+let imgCallejon;
+let imgFinalMalo;
+let imgFinalBueno;
 
 let maxTexto = 0;
 let indiceTexto = 0;
@@ -36,6 +39,9 @@ function preload() {
   imgCuadroDecision = loadImage('assets/cuadro_decision.png');
   imgDepartamento = loadImage('assets/fondo_departamento.png');
   imgDiscoteca = loadImage('assets/fondo_discoteca.png');
+  imgCallejon = loadImage('assets/fondo_callejon.png');
+  imgFinalMalo = loadImage('assets/final_malo.jpg');   //
+  imgFinalBueno = loadImage('assets/final_bueno.jpg');
 
   for (let i = 0; i < totalFramesLluvia; i++) {
     framesLluvia[i] = loadImage('assets/lluvia_' + i + '.png');
@@ -121,10 +127,25 @@ function dibujarEscenaDepartamento() {
   dibujarInterfazTexto(nombresDepartamento, dialogoDepartamento);
 }
 
-//Discoteca: Aun en progreso ashex
+//Discoteca: hecho
 function dibujarEscenaDiscoteca() {
   image(imgDiscoteca, 0, 0, width, height);
   dibujarInterfazTexto(nombresDiscoteca, dialogoDiscoteca);
+}
+
+//Esto seria volver a la bodega
+function dibujarEscenaSegundaBodega() {
+  if (indiceTexto == dialogoSegundaBodega.length - 1){
+  image(imgFondoNegro, 0, 0, width, height);
+  } else {
+    image(imgBodega, 0, 0, width, height);
+  }
+  dibujarInterfazTexto(nombresSegundaBodega, dialogoSegundaBodega);
+}
+//CALLEJON OSCURO:  que mieio
+function dibujarEscenaCallejon() {
+  image(imgCallejon, 0, 0, width, height);
+  dibujarInterfazTexto(nombresCallejon, dialogoCallejon);
 }
 
 //Funcion para volver a llamar la interfaz de texto, vendria siendo literalmente todo lo que sirva pal texto xD
@@ -141,7 +162,6 @@ function dibujarInterfazTexto(listaNombres, listaDialogos) {
   
   fill(20, 50, 60);
   textSize(16);
-  textLeading(22);
   textAlign(LEFT, TOP);
   
   let textoActual = listaDialogos[indiceTexto];
@@ -155,4 +175,29 @@ function dibujarInterfazTexto(listaNombres, listaDialogos) {
 //Una imagen negra que sirve para darle ese toque de suspensito
 function dibujarTransicionSuspenso(){
   image(imgFondoNegro, 0, 0, width, height);
+}
+//boton de decision callejon
+function dibujarPantallaDecisionCallejon() {
+  dibujarEscenaCallejon();
+  
+  image(imgCuadroDecision, 200, 110, 400, 160);
+
+  push();
+  fill(20, 50, 60);
+  textSize(14);
+  textAlign(CENTER, CENTER);
+  text("Enfrentar al atacante y defenderse", 400, 165);
+  text("Intentar huir y escapar del callejón", 400, 215);
+  pop();
+}
+
+// FUNCIONES PARA LOS FINALES
+function dibujarFinalBueno() {
+  image(imgFinalBueno, 0, 0, width, height); 
+  dibujarInterfazTexto(nombresFinalBueno, dialogoFinalBueno);
+}
+
+function dibujarFinalMalo() {
+  image(imgFinalMalo, 0, 0, width, height); 
+  dibujarInterfazTexto(nombresFinalMalo, dialogoFinalMalo);
 }

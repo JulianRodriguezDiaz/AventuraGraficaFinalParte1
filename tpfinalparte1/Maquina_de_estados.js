@@ -14,5 +14,15 @@ function maquinaEstados() {
     dibujarEscenaDepartamento(); // Departamento
   } else if (estadoPantalla == 6) {
     dibujarEscenaDiscoteca(); // Tropitango Bailable
+  } else if (estadoPantalla == 7) {
+    dibujarEscenaSegundaBodega(); // Segunda inspeccion de la bodega donde encuentra el arma y las huellas hacia una zona oscura
+  } else if (estadoPantalla == 8) {
+    dibujarEscenaCallejon(); //Callejon    
+  } else if (estadoPantalla == 9) {
+    dibujarPantallaDecisionCallejon(); //  Decision callejon
+  } else if (estadoPantalla == 10) {
+    dibujarFinalBueno(); // Opcion de defenderse / pelear
+  } else if (estadoPantalla == 11) {
+    dibujarFinalMalo(); // Opcion de escapar / muerte
   }
 }
