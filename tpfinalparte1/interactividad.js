@@ -15,6 +15,7 @@ function mousePressed() {
       } else {
         estadoPantalla = 2;
         maxTexto = 0;
+        indiceTexto = 0; 
       } 
     }
   }
@@ -35,15 +36,12 @@ function mousePressed() {
     }
   }
   else if (estadoPantalla == 4) {
-  
     if (mouseX > 200 && mouseX < 600) {
-     
       if (mouseY > 110 && mouseY < 190) {
         estadoPantalla = 5;
         maxTexto = 0;
         indiceTexto = 0;
       } 
-     
       else if (mouseY > 190 && mouseY < 270) {
         estadoPantalla = 6;
         maxTexto = 0;
@@ -64,7 +62,65 @@ function mousePressed() {
       if (indiceTexto < dialogoDiscoteca.length - 1) {
         indiceTexto++;
         maxTexto = 0;
+      } else {
+        estadoPantalla = 7;
+        maxTexto = 0;
+        indiceTexto = 0;
+      }
+    }
+  } 
+  else if (estadoPantalla == 7) {
+    if (mouseX > 100 && mouseX < 700 && mouseY > 300 && mouseY < 450) {
+      if (indiceTexto < dialogoSegundaBodega.length - 1) {
+        indiceTexto++;
+        maxTexto = 0;
+      } else {
+        estadoPantalla = 8;
+        maxTexto = 0;
+        indiceTexto = 0;
+      } 
+    }
+  }
+  else if (estadoPantalla == 8) {
+    if (mouseX > 100 && mouseX < 700 && mouseY > 300 && mouseY < 450) {
+      if (indiceTexto < dialogoCallejon.length - 1) {
+        indiceTexto++;
+        maxTexto = 0;
+      } else {
+        estadoPantalla = 9;
+        maxTexto = 0;
+        indiceTexto = 0;
       }
     }
   }
-}
+  else if (estadoPantalla == 9) {
+    if (mouseX > 200 && mouseX < 600) {
+      if (mouseY > 110 && mouseY < 190) {
+        estadoPantalla = 10; //FINAL BUENO
+        maxTexto = 0;
+        indiceTexto = 0;
+      } 
+      else if (mouseY > 190 && mouseY < 270) {
+        estadoPantalla = 11; //FINAL MALO
+        maxTexto = 0;
+        indiceTexto = 0;
+      }
+    }
+  }
+else if (estadoPantalla == 10) {
+    if (mouseX > 100 && mouseX < 700 && mouseY > 300 && mouseY < 450) {
+      if (indiceTexto < dialogoFinalBueno.length - 1) {
+        indiceTexto++;
+        maxTexto = 0;
+      }
+    }
+  }
+  else if (estadoPantalla == 11) {
+    if (mouseX > 100 && mouseX < 700 && mouseY > 300 && mouseY < 450) {
+      if (indiceTexto < dialogoFinalMalos.length - 1) { 
+        indiceTexto++;
+        maxTexto = 0;
+      }
+    }
+  }
+  }
