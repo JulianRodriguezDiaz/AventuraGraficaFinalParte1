@@ -37,79 +37,79 @@ let nombresBodega = [
 ];
 
 // Arreglos con textos de departamento
-let dialogoDepartamento = {
-  "(Marquez golpea la puerta del departamento de Eric. Tardan en abrir.)";
-  "Buenas noches, ¿en qué puedo ayudarlo?";
-  "Soy Marquez, el detective a cargo de la investigación de la muerte de su pareja. Vengo a hacerle unas preguntas.";
-  "Si adelante, pase porfavor.";
-  "(Marquez entra al departamento, es pequeño pero acojedor.)";
-  "¿Podrías contarme un poco sobre Lucas antes de ir al trabajo?";
-  "Si. Yo estaba trabajando en la mesa del comedor aca en casa y él estaba a mi lado escribiendo en su diario íntimo...";
-  "A las 11 pm el avisó que iba a trabajar, se preparó y se marchó. A las 2 am le mandé mensaje porque me estaba empezando a preocupar.";
-  "Al no recibir respuesta alguna no dormí en toda la noche esperando a que regrese, hasta que me llamaron y me dijeron que lo hallaron muerto...";
-  "Comprendo, y siento mucho su pérdida. Resolveré este caso para hacer justicia, sino es molestia me gustaría hecharle un vistazo al diario íntimo.";
-  "(Eric asiente y va a la habitación a buscarlo. Al encontralo, vuelve con Marquez y se lo da, donde empieza a leer detenidamente las páginas tratando de buscar alguna pista.)";
-  "(Marquez descubre algo: en las páginas encuentra un código secreto que dice ALMACEN JAIME en morse.)";
-  "Eric, ¿podrías decirme un poco sobre el Almacen Jaime?";
-  "Es en donde trabajabamos los dos antes de que cerrara permanentemente, ahora por lo que entiendo está abandonado.";
-  "Bien, iré a investigar a ese lugar. Cualquier cosa que averigues no dudes en avisar, adios.";
-  "(Marquez se dirige al almacen abandonado.)";
-};
+let dialogoDepartamento = [
+  "(Marquez golpea la puerta del departamento de Eric. Tardan en abrir.)",
+  "Buenas noches, ¿en qué puedo ayudarlo?",
+  "Soy Marquez, el detective a cargo de la investigación de la muerte de su pareja. Vengo a hacerle unas preguntas.",
+  "Si adelante, pase porfavor.",
+  "(Marquez entra al departamento, es pequeño pero acojedor.)",
+  "¿Podrías contarme un poco sobre Lucas antes de ir al trabajo?",
+  "Si. Yo estaba trabajando en la mesa del comedor aca en casa y él estaba a mi lado escribiendo en su diario íntimo...",
+  "A las 11 pm el avisó que iba a trabajar, se preparó y se marchó. A las 2 am le mandé mensaje porque me estaba empezando a preocupar.",
+  "Al no recibir respuesta alguna no dormí en toda la noche esperando a que regrese, hasta que me llamaron y me dijeron que lo hallaron muerto...",
+  "Comprendo, y siento mucho su pérdida. Resolveré este caso para hacer justicia, sino es molestia me gustaría hecharle un vistazo al diario íntimo.",
+  "(Eric asiente y va a la habitación a buscarlo. Al encontralo, vuelve con Marquez y se lo da, donde empieza a leer detenidamente las páginas tratando de buscar alguna pista.)",
+  "(Marquez descubre algo: en las páginas encuentra un código secreto que dice ALMACEN JAIME en morse.)",
+  "Eric, ¿podrías decirme un poco sobre el Almacen Jaime?",
+  "Es en donde trabajabamos los dos antes de que cerrara permanentemente, ahora por lo que entiendo está abandonado.",
+  "Bien, iré a investigar a ese lugar. Cualquier cosa que averigues no dudes en avisar, adios.",
+  "(Marquez se dirige al almacen abandonado.)",
+];
 
-let nombresDepartamento = {
-  "NARRADOR";
-  "ERIC BENJAMÍN";
-  "MARQUEZ";
-  "ERIC BENJAMÍN";
-  "NARRADOR";
-  "MARQUEZ";
-  "ERIC BENJAMÍN";
-  "ERIC BENJAMÍN";
-  "ERIC BENJAMÍN";
-  "MARQUEZ";
-  "NARRADOR";
-  "NARRADOR";
-  "MARQUEZ";
-  "ERIC BENJAMÍN";
-  "MARQUEZ";
-  "NARRADOR";
-}
+let nombresDepartamento = [
+  "NARRADOR",
+  "ERIC BENJAMÍN",
+  "MARQUEZ",
+  "ERIC BENJAMÍN",
+  "NARRADOR",
+  "MARQUEZ",
+  "ERIC BENJAMÍN",
+  "ERIC BENJAMÍN",
+  "ERIC BENJAMÍN",
+  "MARQUEZ",
+  "NARRADOR",
+  "NARRADOR",
+  "MARQUEZ",
+  "ERIC BENJAMÍN",
+  "MARQUEZ",
+  "NARRADOR",
+];
 
 // Arreglos con textos de la discoteca
 let dialogoDiscoteca = [
-  "(Marquez se dirige a la discoteca, donde hay gente bailando en la pista de nadie ignorando los hechos. Va a la barra.)";
-  "(Marquez reconoce al barman Yahir, quien se sabe que fue la última persona que vió e interactuó con la víctima.)";
-  "Buenas noches Yahir, soy Marquez, el detective a cargo de la investigación de la muerte de Lucas. Vengo a hacerle unas preguntas.";
-  "O-Oh Buenas noches...no pense que vendría a investigar sabiendo que el lugar está lleno de gente...";
-  "Bueno, eso no es impedimento para avanzar en la investigación. Bueno Yahir, ¿podrías contarme un poco sobre Lucas cuando vino acá?";
-  "E-este sí...él vino porque dijo que había encontrado otro empleo y que renunciaría. Nos quedamos conversando un poco, le di su liquidación y se fue...";
-  "Bien...¿y no le comentó a dónde se dirigía exactamente?";
-  "E-em no, no recuerdo que haya mencionado algo al respecto.";
-  "Entonces...¿cómo explica que el cuerpo de Lucas haya aparecido en la bodega de este lugar si se supone que se había ido?.";
-  "¡Discúlpeme pero me ofende muchísimo que esté dudando de mí cuando le digo que no se nada!";
-  "Además aún no tienen muchas pistas sobre cómo lo asesinaron siquiera, no descubrieron la pistola...";
-  "(Marquez se da cuenta de dos cosas: el nerviosismo de Yahir y que él nunca mencionó respecto al objeto/arma utilizada para asesinar a Lucas.)";
-  "Tiene razón Yahir. Aún no tenemos la pista respecto al objeto/arma...";
-  "¿V-Vio? Se lo dije, no tienen nada contra m-mí...y con su permiso seguiré trabajando.";
-  "(Yahir va a atender a dos clientes, Marquez aprovecha la informacíon para regresar a la bodega y buscar pistas de la pistola.)";
+  "(Marquez se dirige a la discoteca, donde hay gente bailando en la pista de baile ignorando los hechos. Va a la barra.)",
+  "(Marquez reconoce al barman Yahir, quien se sabe que fue la última persona que vió e interactuó con la víctima.)",
+  "Buenas noches Yahir, soy Marquez, el detective a cargo de la investigación de la muerte de Lucas. Vengo a hacerle unas preguntas.",
+  "O-Oh Buenas noches...no pense que vendría a investigar sabiendo que el lugar está lleno de gente...",
+  "Bueno, eso no es impedimento para avanzar en la investigación. Bueno Yahir, ¿podrías contarme un poco sobre Lucas cuando vino acá?",
+  "E-este sí...él vino porque dijo que había encontrado otro empleo y que renunciaría. Nos quedamos conversando un poco, le di su liquidación y se fue...",
+  "Bien...¿y no le comentó a dónde se dirigía exactamente?",
+  "E-em no, no recuerdo que haya mencionado algo al respecto.",
+  "Entonces...¿cómo explica que el cuerpo de Lucas haya aparecido en la bodega de este lugar si se supone que se había ido?.",
+  "¡Discúlpeme pero me ofende muchísimo que esté dudando de mí cuando le digo que no se nada!",
+  "Además aún no tienen muchas pistas sobre cómo lo asesinaron siquiera, no descubrieron la pistola...",
+  "(Marquez se da cuenta de dos cosas: el nerviosismo de Yahir y que él nunca mencionó respecto al objeto/arma utilizada para asesinar a Lucas.)",
+  "Tiene razón Yahir. Aún no tenemos la pista respecto al objeto/arma...",
+  "¿V-Vio? Se lo dije, no tienen nada contra m-mí...y con su permiso seguiré trabajando.",
+  "(Yahir va a atender a dos clientes, Marquez aprovecha la informacíon para regresar a la bodega y buscar pistas de la pistola.)",
 ];
 
 let nombresDiscoteca = [
-  "NARRADOR";
-  "NARRADOR";
-  "MARQUEZ";
-  "YAHIR";
-  "MARQUEZ";
-  "YAHIR";
-  "MARQUEZ";
-  "YAHIR";
-  "MARQUEZ";
-  "YAHIR";
-  "YAHIR";
-  "NARRADOR";
-  "MARQUEZ";
-  "YAHIR";
-  "NARRADOR";
+  "NARRADOR",
+  "NARRADOR",
+  "MARQUEZ",
+  "YAHIR",
+  "MARQUEZ",
+  "YAHIR",
+  "MARQUEZ",
+  "YAHIR",
+  "MARQUEZ",
+  "YAHIR",
+  "YAHIR",
+  "NARRADOR",
+  "MARQUEZ",
+  "YAHIR",
+  "NARRADOR",
 ];
   
   
