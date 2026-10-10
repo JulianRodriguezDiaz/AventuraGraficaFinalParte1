@@ -76,4 +76,40 @@ let nombresDepartamento = {
 }
 
 // Arreglos con textos de la discoteca
-let 
+let dialogoDiscoteca = [
+  "(Marquez se dirige a la discoteca, donde hay gente bailando en la pista de nadie ignorando los hechos. Va a la barra.)";
+  "(Marquez reconoce al barman Yahir, quien se sabe que fue la última persona que vió e interactuó con la víctima.)";
+  "Buenas noches Yahir, soy Marquez, el detective a cargo de la investigación de la muerte de Lucas. Vengo a hacerle unas preguntas.";
+  "O-Oh Buenas noches...no pense que vendría a investigar sabiendo que el lugar está lleno de gente...";
+  "Bueno, eso no es impedimento para avanzar en la investigación. Bueno Yahir, ¿podrías contarme un poco sobre Lucas cuando vino acá?";
+  "E-este sí...él vino porque dijo que había encontrado otro empleo y que renunciaría. Nos quedamos conversando un poco, le di su liquidación y se fue...";
+  "Bien...¿y no le comentó a dónde se dirigía exactamente?";
+  "E-em no, no recuerdo que haya mencionado algo al respecto.";
+  "Entonces...¿cómo explica que el cuerpo de Lucas haya aparecido en la bodega de este lugar si se supone que se había ido?.";
+  "¡Discúlpeme pero me ofende muchísimo que esté dudando de mí cuando le digo que no se nada!";
+  "Además aún no tienen muchas pistas sobre cómo lo asesinaron siquiera, no descubrieron la pistola...";
+  "(Marquez se da cuenta de dos cosas: el nerviosismo de Yahir y que él nunca mencionó respecto al objeto/arma utilizada para asesinar a Lucas.)";
+  "Tiene razón Yahir. Aún no tenemos la pista respecto al objeto/arma...";
+  "¿V-Vio? Se lo dije, no tienen nada contra m-mí...y con su permiso seguiré trabajando.";
+  "(Yahir va a atender a dos clientes, Marquez aprovecha la informacíon para regresar a la bodega y buscar pistas de la pistola.)";
+];
+
+let nombresDiscoteca = [
+  "NARRADOR";
+  "NARRADOR";
+  "MARQUEZ";
+  "YAHIR";
+  "MARQUEZ";
+  "YAHIR";
+  "MARQUEZ";
+  "YAHIR";
+  "MARQUEZ";
+  "YAHIR";
+  "YAHIR";
+  "NARRADOR";
+  "MARQUEZ";
+  "YAHIR";
+  "NARRADOR";
+];
+  
+  
