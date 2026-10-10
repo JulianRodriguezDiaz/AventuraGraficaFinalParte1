@@ -1,4 +1,4 @@
-// Botones interactivos y control de clics
+//Botones interactivos.
 function mousePressed() {
   if (estadoPantalla == 0) {
     if (mouseX > 300 && mouseX < 500 && mouseY > 280 && mouseY < 380) {
@@ -38,12 +38,12 @@ function mousePressed() {
   else if (estadoPantalla == 4) {
     if (mouseX > 200 && mouseX < 600) {
       if (mouseY > 110 && mouseY < 190) {
-        estadoPantalla = 5; //Departamento
+        estadoPantalla = 5;
         maxTexto = 0;
         indiceTexto = 0;
       } 
       else if (mouseY > 190 && mouseY < 270) {
-        estadoPantalla = 6; // Discoteca
+        estadoPantalla = 6;
         maxTexto = 0;
         indiceTexto = 0;
       }
@@ -54,10 +54,6 @@ function mousePressed() {
       if (indiceTexto < dialogoDepartamento.length - 1) {
         indiceTexto++;
         maxTexto = 0;
-      } else {
-        estadoPantalla = 12; 
-        maxTexto = 0;
-        indiceTexto = 0;
       }
     }
   }
@@ -93,25 +89,24 @@ function mousePressed() {
       } else {
         estadoPantalla = 9;
         maxTexto = 0;
-        indiceTexto = 0;
       }
     }
   }
   else if (estadoPantalla == 9) {
     if (mouseX > 200 && mouseX < 600) {
       if (mouseY > 110 && mouseY < 190) {
-        estadoPantalla = 10; // FINAL BUENO
+        estadoPantalla = 10; //FINAL BUENO
         maxTexto = 0;
         indiceTexto = 0;
       } 
       else if (mouseY > 190 && mouseY < 270) {
-        estadoPantalla = 11; // FINAL MALO
+        estadoPantalla = 11; //FINAL MALO
         maxTexto = 0;
         indiceTexto = 0;
       }
     }
   }
-  else if (estadoPantalla == 10) {
+else if (estadoPantalla == 10) {
     if (mouseX > 100 && mouseX < 700 && mouseY > 300 && mouseY < 450) {
       if (indiceTexto < dialogoFinalBueno.length - 1) {
         indiceTexto++;
@@ -127,67 +122,4 @@ function mousePressed() {
       }
     }
   }
-
-  else if (estadoPantalla == 12) {
-    if (mouseX > 100 && mouseX < 700 && mouseY > 300 && mouseY < 450) {
-      if (indiceTexto < dialogoAlmacen.length - 1) {
-        indiceTexto++;
-        maxTexto = 0;
-      } else {
-        estadoPantalla = 15; //pantalla de decision
-        maxTexto = 0;
-        indiceTexto = 0;
-      }
-    }
-  }
-
-  else if (estadoPantalla == 15) {
-    if (mouseX > 200 && mouseX < 600) {
-      if (mouseY > 110 && mouseY < 190) {
-        estadoPantalla = 13; // Entrar sigilosamente
-        maxTexto = 0;
-        indiceTexto = 0;
-      } 
-      else if (mouseY > 190 && mouseY < 270) {
-        estadoPantalla = 14; //Entrar a la fuerza 
-        maxTexto = 0;
-        indiceTexto = 0;
-      }
-    }
-  }
-
-  else if (estadoPantalla == 13) {
-    if (mouseX > 100 && mouseX < 700 && mouseY > 300 && mouseY < 450) {
-      if (indiceTexto < dialogoAlmacenSigiloso.length - 1) {
-        indiceTexto++;
-        maxTexto = 0;
-      } else {
-        estadoPantalla = 10; //Pasa al Final Bueno
-        maxTexto = 0;
-        indiceTexto = 0;
-      }
-    }
-  }
-
-  else if (estadoPantalla == 14) {
-    if (mouseX > 100 && mouseX < 700 && mouseY > 300 && mouseY < 450) {
-      if (indiceTexto < dialogoAlmacenLlamas.length - 1) {
-        indiceTexto++;
-        maxTexto = 0;
-      } else {
-        estadoPantalla = 16; //Pasa al FINAL NEUTRAL
-        maxTexto = 0;
-        indiceTexto = 0;
-      }
-    }
-  }
-
-  else if (estadoPantalla == 16) {
-    if (mouseX > 100 && mouseX < 700 && mouseY > 300 && mouseY < 450) {
-      if (indiceTexto < dialogoFinalNeutral.length - 1) {
-        indiceTexto++;
-        maxTexto = 0;
-      }
-    }
-  }
-}
+ }
