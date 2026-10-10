@@ -19,6 +19,9 @@ let imgDiscoteca;
 let imgCallejon;
 let imgFinalMalo;
 let imgFinalBueno;
+let imgAlmacen;
+let imgAlmacenEnLlamas;
+let imgFinalNeutral;
 
 let maxTexto = 0;
 let indiceTexto = 0;
@@ -40,8 +43,11 @@ function preload() {
   imgDepartamento = loadImage('assets/fondo_departamento.png');
   imgDiscoteca = loadImage('assets/fondo_discoteca.png');
   imgCallejon = loadImage('assets/fondo_callejon.png');
-  imgFinalMalo = loadImage('assets/final_malo.jpg');   //
+  imgFinalMalo = loadImage('assets/final_malo.jpg');   
   imgFinalBueno = loadImage('assets/final_bueno.jpg');
+  imgAlmacen = loadImage('assets/fondo_almacen.png');
+  imgAlmacenEnLlamas = loadImage('assets/fondo_almacen_en_llamas.png');
+  imgFinalNeutral = loadImage('assets/final_neutral.jpg');
 
   for (let i = 0; i < totalFramesLluvia; i++) {
     framesLluvia[i] = loadImage('assets/lluvia_' + i + '.png');
@@ -191,6 +197,35 @@ function dibujarPantallaDecisionCallejon() {
   pop();
 }
 
+function dibujarEscenaAlmacen() {
+  image(imgAlmacen, 0, 0, width, height); 
+  dibujarInterfazTexto(nombresAlmacen, dialogoAlmacen);
+}
+ 
+ function dibujarPantallaDecisionAlmacen() {
+  image(imgAlmacen, 0, 0, width, height);
+  dibujarInterfazTexto(nombresAlmacen, dialogoAlmacen);
+
+  image(imgCuadroDecision, 200, 110, 400, 160);
+
+  push();
+  fill(20, 50, 60);
+  textSize(14);
+  textAlign(CENTER, CENTER);
+  text("Entrar sigilosamente por la puerta trasera", 415, 165);
+  text("Entrar a la fuerza derribando la entrada", 415, 215);
+  pop();
+}
+
+function dibujarEscenaAlmacenLlamas() {
+  image(imgAlmacenEnLlamas, 0, 0, width, height);
+  dibujarInterfazTexto(nombresAlmacenLlamas, dialogoAlmacenLlamas);
+}
+function dibujarEscenaAlmacenSigiloso() {
+  image(imgAlmacen, 0, 0, width, height);
+  dibujarInterfazTexto(nombresAlmacenSigiloso, dialogoAlmacenSigiloso);
+}
+
 // FUNCIONES PARA LOS FINALES
 function dibujarFinalBueno() {
   image(imgFinalBueno, 0, 0, width, height); 
@@ -200,4 +235,8 @@ function dibujarFinalBueno() {
 function dibujarFinalMalo() {
   image(imgFinalMalo, 0, 0, width, height); 
   dibujarInterfazTexto(nombresFinalMalo, dialogoFinalMalo);
+}
+function dibujarFinalNeutral() {
+  image(imgFinalNeutral, 0, 0, width, height);
+  dibujarInterfazTexto(nombresFinalNeutral, dialogoFinalNeutral);
 }
