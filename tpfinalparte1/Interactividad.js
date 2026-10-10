@@ -50,13 +50,17 @@ function mousePressed() {
     }
   }
   else if (estadoPantalla == 5) {
-    if (mouseX > 100 && mouseX < 700 && mouseY > 300 && mouseY < 450) {
-      if (indiceTexto < dialogoDepartamento.length - 1) {
-        indiceTexto++;
-        maxTexto = 0;
-      }
+  if (mouseX > 100 && mouseX < 700 && mouseY > 300 && mouseY < 450) {
+    if (indiceTexto < dialogoDepartamento.length - 1) {
+      indiceTexto++;
+      maxTexto = 0;
+    } else {
+      estadoPantalla = 12;
+      maxTexto = 0;
+      indiceTexto = 0;
     }
   }
+}
   else if (estadoPantalla == 6) {
     if (mouseX > 100 && mouseX < 700 && mouseY > 300 && mouseY < 450) {
       if (indiceTexto < dialogoDiscoteca.length - 1) {
@@ -122,4 +126,53 @@ else if (estadoPantalla == 10) {
       }
     }
   }
+  else if (estadoPantalla == 12) {
+  if (mouseX > 100 && mouseX < 700 && mouseY > 300 && mouseY < 450) {
+    if (indiceTexto < dialogoAlmacen.length - 1) {
+      indiceTexto++;
+      maxTexto = 0;
+    } else {
+      estadoPantalla = 15;
+      maxTexto = 0;
+    }
+  }
+}
+else if (estadoPantalla == 15) {
+  if (mouseX > 200 && mouseX < 600) {
+    if (mouseY > 110 && mouseY < 190) {
+      estadoPantalla = 13; // sigiloso
+      maxTexto = 0;
+      indiceTexto = 0;
+    }
+    else if (mouseY > 190 && mouseY < 270) {
+      estadoPantalla = 14; // a la fuerza (llamas)
+      maxTexto = 0;
+      indiceTexto = 0;
+    }
+  }
+}
+else if (estadoPantalla == 13) {
+  if (mouseX > 100 && mouseX < 700 && mouseY > 300 && mouseY < 450) {
+    if (indiceTexto < dialogoAlmacenSigiloso.length - 1) {
+      indiceTexto++;
+      maxTexto = 0;
+    } else {
+      estadoPantalla = 10; // final bueno
+      maxTexto = 0;
+      indiceTexto = 0;
+    }
+  }
+}
+else if (estadoPantalla == 14) {
+  if (mouseX > 100 && mouseX < 700 && mouseY > 300 && mouseY < 450) {
+    if (indiceTexto < dialogoAlmacenLlamas.length - 1) {
+      indiceTexto++;
+      maxTexto = 0;
+    } else {
+      estadoPantalla = 16; // final neutral
+      maxTexto = 0;
+      indiceTexto = 0;
+    }
+  }
+}
  }
