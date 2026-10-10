@@ -17,22 +17,22 @@ let imgDepa;
 let estadoPantalla = 0;
 
 // Aca se cargan las imagenes.
-function preload() {
-  imgInicio = loadImage('assets/start.png');
-  imgFondo = loadImage('assets/fondo_ciudad.jpg');
-  imgLogo = loadImage('assets/logo.png'); 
-  imgOficina = loadImage('assets/fondo_oficina.jpg'); 
-  imgAlmacen = loadImage ('assets/fondo_almacen.png');
-  imgAlmacenLlamas = loadImage ('assets/fondo_almacen_en_llamas.png');
-  imgDiscoteca = loadImage ('assets/fondo_discoteca.png');
-  imgBodega = loadImage ('assets/fondo_bodega.jpg');
-  imgCallejon = loadImage ('assets/fondo_callejon.png');
-  imgDepa = loadImage ('assets/fondo_departamento.png');
-
-  for (let i = 0; i < totalFramesLluvia; i++) {
-    framesLluvia[i] = loadImage('assets/lluvia_' + i + '.png');
+  function preload() {
+    imgInicio = loadImage('assets/start.png');
+    imgFondo = loadImage('assets/fondo_ciudad.jpg');
+    imgLogo = loadImage('assets/logo.png'); 
+    imgOficina = loadImage('assets/fondo_oficina.jpg'); 
+    imgAlmacen = loadImage ('assets/fondo_almacen.png');
+    imgAlmacenLlamas = loadImage ('assets/fondo_almacen_en_llamas.png');
+    imgDiscoteca = loadImage ('assets/fondo_discoteca.png');
+    imgBodega = loadImage ('assets/fondo_bodega.jpg');
+    imgCallejon = loadImage ('assets/fondo_callejon.png');
+    imgDepa = loadImage ('assets/fondo_departamento.png');
+  
+    for (let i = 0; i < totalFramesLluvia; i++) {
+      framesLluvia[i] = loadImage('assets/lluvia_' + i + '.png');
+    }
   }
-}
 
 function setup() {
   createCanvas(800, 450);
@@ -46,23 +46,23 @@ function draw() {
 }
 
 //funcion para todo lo que es la primera pantalla y que este ordenadito.
-function dibujarPantallaInicio(imagen1, imagen2, imagen3) {
-  //fondo y lluvia solo en pantalla 0.
-    image(imagen1, 0, 0);
-  
-    contadorFrames++;
-    if (contadorFrames >= 4) {
-      frameActual = (frameActual + 1) % totalFramesLluvia;
-      contadorFrames = 0;
-    }
-    if (framesLluvia[frameActual]) {
-      image(framesLluvia[frameActual], 0, 0);
-    }
+  function dibujarPantallaInicio(imagen1, imagen2, imagen3) {
+    //fondo y lluvia solo en pantalla 0.
+      image(imagen1, 0, 0);
     
-  //esto seria el logo.
-    imageMode(CENTER);
-    image(imagen2, width / 2, 120);
-    imageMode(CORNER);
-  //esto seria la imagen del boton.
-    image(imagen3, 300, 280, 200, 100);
-  }
+      contadorFrames++;
+      if (contadorFrames >= 4) {
+        frameActual = (frameActual + 1) % totalFramesLluvia;
+        contadorFrames = 0;
+      }
+      if (framesLluvia[frameActual]) {
+        image(framesLluvia[frameActual], 0, 0);
+      }
+      
+    //esto seria el logo.
+      imageMode(CENTER);
+      image(imagen2, width / 2, 120);
+      imageMode(CORNER);
+    //esto seria la imagen del boton.
+      image(imagen3, 300, 280, 200, 100);
+    }

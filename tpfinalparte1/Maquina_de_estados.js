@@ -1,4 +1,4 @@
-//función sin parámetros
+//función sin parámetros.
   function maquinaEstados(){
     if (estadoPantalla == 0) {
         dibujarPantallaInicio(imgFondo, imgLogo, imgInicio);
@@ -12,12 +12,12 @@
         dibujarEscena(imgCallejon);
       } else if (estadoPantalla == 5){
         dibujarEscena5(255, CENTER, 50, 25);
-      } else if (estadoPantalla == 0){
+      } else if (estadoPantalla == 0){ //para regresar al menú.
         dibujarPantallaInicio(imgFondo, imgLogo, imgInicio); 
       }
     } 
-//Eventos: pasa a otra pantalla.
-  //Creditos -esta improvisado esto, dsp vemos si lo personalizamos god-
+//Eventos: instante en el que pasa a otra pantalla.
+  //Creditos -esta improvisado esto, dsp vemos si lo personalizamos god-.
     function dibujarEscena5(blanco, alineacion, tamTexto1, tamTexto2) {
       fill(blanco);
       textSize(tamTexto1);
@@ -32,7 +32,7 @@
       rect(width, height);
     }
 
-//función con parámetros
+//función con parámetros.
   function dibujarEscena(imagen){
    image(imagen, 0, 0, width, height); 
   }
