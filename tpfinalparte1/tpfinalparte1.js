@@ -36,7 +36,6 @@ let risa;
 let pasos;
 let notaPianoSuspenso;
 let notaPianoDross;
-let latidos;
 
 function preload() {
   //Aca se cargan las imagenes.
@@ -70,7 +69,6 @@ function preload() {
   pasos = loadSound('assets/508708__mgc5066__steps.wav');
   notaPianoSuspenso = loadSound('assets/648909__tusic99__reversed-piano-note-with-clean-no-reverb.wav');
   notaPianoDross = loadSound('assets/sonidoPianoDross.mp3');
-  latidos = loadSound('assets/418866__name__heartbeat-loop.wav');
 }
 
 function setup() {

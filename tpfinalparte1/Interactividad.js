@@ -15,7 +15,7 @@ function mousePressed() {
       estadoPantalla = 2;
       maxTexto = 0;
       indiceTexto = 0;
-      notaPianoDross.play();
+      notaPianoDross.play(); //para que suene el piano en la pantalla en negro
     }
   }
 }
@@ -23,7 +23,7 @@ function mousePressed() {
   estadoPantalla = 3;
   maxTexto = 0;
   indiceTexto = 0;
-  notaPianoDross.stop();
+  notaPianoDross.stop(); //para que se detenga el piano en la pantalla en negro
 }
   else if (estadoPantalla == 3) {
     if (mouseX > 100 && mouseX < 700 && mouseY > 300 && mouseY < 450) {
@@ -86,17 +86,23 @@ function mousePressed() {
       } 
     }
   }
-  else if (estadoPantalla == 8) {
-    if (mouseX > 100 && mouseX < 700 && mouseY > 300 && mouseY < 450) {
-      if (indiceTexto < dialogoCallejon.length - 1) {
-        indiceTexto++;
-        maxTexto = 0;
-      } else {
-        estadoPantalla = 9;
-        maxTexto = 0;
+else if (estadoPantalla == 8) {
+  if (mouseX > 100 && mouseX < 700 && mouseY > 300 && mouseY < 450) {
+    if (indiceTexto < dialogoCallejon.length - 1) {
+      indiceTexto++;
+      maxTexto = 0;
+      if (indiceTexto == 3) {
+        pasos.play(); //para que se escuchen pasos
       }
+      if (indiceTexto == 4) {
+        risa.play(); //para que se escuche la risa del asesino
+      }
+    } else {
+      estadoPantalla = 9;
+      maxTexto = 0;
     }
   }
+}
   else if (estadoPantalla == 9) {
     if (mouseX > 200 && mouseX < 600) {
       if (mouseY > 110 && mouseY < 190) {
@@ -132,6 +138,9 @@ else if (estadoPantalla == 10) {
     if (indiceTexto < dialogoAlmacen.length - 1) {
       indiceTexto++;
       maxTexto = 0;
+      if (indiceTexto == 1) {
+        pasos.play(); 
+      }
     } else {
       estadoPantalla = 15;
       maxTexto = 0;
@@ -145,11 +154,12 @@ else if (estadoPantalla == 15) {
       maxTexto = 0;
       indiceTexto = 0;
     }
-    else if (mouseY > 190 && mouseY < 270) {
+     else if (mouseY > 190 && mouseY < 270) {
       estadoPantalla = 14; // a la fuerza (llamas)
       maxTexto = 0;
       indiceTexto = 0;
-    }
+      notaPianoSuspenso.play(); //para que suene el piano suspenso
+}
   }
 }
 else if (estadoPantalla == 13) {
@@ -173,7 +183,8 @@ else if (estadoPantalla == 14) {
       estadoPantalla = 16; // final neutral
       maxTexto = 0;
       indiceTexto = 0;
-      }
+      notaPianoSuspenso.stop(); //para que se detenga el piano suspenso
     }
   }
+}
  }
