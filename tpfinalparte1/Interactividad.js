@@ -1,4 +1,4 @@
-// Botones interactivos y control de clics
+// Botones interactivos y control de clics con sonidos integrados
 function mousePressed() {
   if (estadoPantalla == 0) {
     if (mouseX > 300 && mouseX < 500 && mouseY > 280 && mouseY < 380) {
@@ -15,7 +15,8 @@ function mousePressed() {
       } else {
         estadoPantalla = 2;
         maxTexto = 0;
-        indiceTexto = 0; 
+        indiceTexto = 0;
+        notaPianoDross.play(); // Sonido de piano en la pantalla en negro
       } 
     }
   }
@@ -23,6 +24,7 @@ function mousePressed() {
     estadoPantalla = 3;
     maxTexto = 0;
     indiceTexto = 0;
+    notaPianoDross.stop(); // Se detiene el piano en la pantalla en negro
   }
   else if (estadoPantalla == 3) {
     if (mouseX > 100 && mouseX < 700 && mouseY > 300 && mouseY < 450) {
@@ -38,12 +40,12 @@ function mousePressed() {
   else if (estadoPantalla == 4) {
     if (mouseX > 200 && mouseX < 600) {
       if (mouseY > 110 && mouseY < 190) {
-        estadoPantalla = 5; //Departamento
+        estadoPantalla = 5;
         maxTexto = 0;
         indiceTexto = 0;
       } 
       else if (mouseY > 190 && mouseY < 270) {
-        estadoPantalla = 6; // Discoteca
+        estadoPantalla = 6;
         maxTexto = 0;
         indiceTexto = 0;
       }
@@ -55,7 +57,7 @@ function mousePressed() {
         indiceTexto++;
         maxTexto = 0;
       } else {
-        estadoPantalla = 12; 
+        estadoPantalla = 12;
         maxTexto = 0;
         indiceTexto = 0;
       }
@@ -90,10 +92,15 @@ function mousePressed() {
       if (indiceTexto < dialogoCallejon.length - 1) {
         indiceTexto++;
         maxTexto = 0;
+        if (indiceTexto == 3) {
+          pasos.play(); // Sonido de pasos en el callejón
+        }
+        if (indiceTexto == 4) {
+          risa.play(); // Sonido de la risa del asesino
+        }
       } else {
         estadoPantalla = 9;
         maxTexto = 0;
-        indiceTexto = 0;
       }
     }
   }
@@ -135,20 +142,21 @@ function mousePressed() {
       }
     }
   }
-
   else if (estadoPantalla == 12) {
     if (mouseX > 100 && mouseX < 700 && mouseY > 300 && mouseY < 450) {
       if (indiceTexto < dialogoAlmacen.length - 1) {
         indiceTexto++;
         maxTexto = 0;
+        if (indiceTexto == 1) {
+          pasos.play(); // Sonido de pasos en el almacén
+        }
       } else {
-        estadoPantalla = 15; //pantalla de decision
+        estadoPantalla = 15;
         maxTexto = 0;
         indiceTexto = 0;
       }
     }
   }
-
   else if (estadoPantalla == 15) {
     if (mouseX > 200 && mouseX < 600) {
       if (mouseY > 110 && mouseY < 190) {
@@ -157,53 +165,52 @@ function mousePressed() {
         indiceTexto = 0;
       } 
       else if (mouseY > 190 && mouseY < 270) {
-        estadoPantalla = 14; //Entrar a la fuerza 
+        estadoPantalla = 14; // Entrar a la fuerza (llamas)
         maxTexto = 0;
         indiceTexto = 0;
+        notaPianoSuspenso.play(); // Sonido de piano de suspenso
       }
     }
   }
-
   else if (estadoPantalla == 13) {
     if (mouseX > 100 && mouseX < 700 && mouseY > 300 && mouseY < 450) {
       if (indiceTexto < dialogoAlmacenSigiloso.length - 1) {
         indiceTexto++;
         maxTexto = 0;
       } else {
-        estadoPantalla = 10; //Pasa al Final Bueno
+        estadoPantalla = 10; // Final bueno
         maxTexto = 0;
         indiceTexto = 0;
       }
     }
   }
-
   else if (estadoPantalla == 14) {
     if (mouseX > 100 && mouseX < 700 && mouseY > 300 && mouseY < 450) {
       if (indiceTexto < dialogoAlmacenLlamas.length - 1) {
         indiceTexto++;
         maxTexto = 0;
       } else {
-        estadoPantalla = 16; //Pasa al FINAL NEUTRAL
+        estadoPantalla = 16; // Final neutral
         maxTexto = 0;
         indiceTexto = 0;
+        notaPianoSuspenso.stop(); // Se detiene el piano de suspenso
       }
     }
   }
-
   else if (estadoPantalla == 16) {
     if (mouseX > 100 && mouseX < 700 && mouseY > 300 && mouseY < 450) {
       if (indiceTexto < dialogoFinalNeutral.length - 1) {
         indiceTexto++;
         maxTexto = 0;
       } else {
-        estadoPantalla = 17;
+        estadoPantalla = 17; // Pasa a Créditos
         maxTexto = 0;
         indiceTexto = 0;
       }
     }
-  } 
+  }
   else if (estadoPantalla == 17) {
-    estadoPantalla = 0; // Reinicia el juego hacia a
+    estadoPantalla = 0; // Reinicia el juego al inicio
     maxTexto = 0;
     indiceTexto = 0;
   }
