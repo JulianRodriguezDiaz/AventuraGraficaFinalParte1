@@ -108,3 +108,4 @@ function AmbienteDiscotecaSonido() {
       ambienteDiscoteca.stop();
     }
   }
+}
