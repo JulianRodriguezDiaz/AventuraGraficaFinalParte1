@@ -1,7 +1,7 @@
 //TP#Final — Aventura Gráfica Interactiva Web [Etapa 1]
 //links videos explicativos
 //Julian Rodriguez Díaz:
-//Milagros Ana Sofia Pizzio: 
+//Milagros Ana Sofia Pizzio:
 
 let imgFondo;
 let framesLluvia = [];
@@ -37,6 +37,14 @@ let indiceTexto = 0;
 // Esto es para la maquinita de estados
 let estadoPantalla = 0;
 
+//Esto es para sonidos
+let ambienteDiscoteca;
+let lluvia;
+let risa;
+let pasos;
+let notaPianoSuspenso;
+let notaPianoDross;
+
 //Aca se cargan las imagenes.
 function preload() {
   imgInicio = loadImage('assets/start.png');
@@ -65,6 +73,13 @@ function preload() {
   for (let i = 0; i < totalFramesLluvia; i++) {
     framesLluvia[i] = loadImage('assets/lluvia_' + i + '.png');
   }
+  //Aca se cargan los sonidos.
+  ambienteDiscoteca = loadSound('assets/323255__scale75__hip-hop_liquid.wav');
+  lluvia = loadSound('assets/613852__suso_ramallo__rain-oc818.wav');
+  risa = loadSound('assets/366176__nanakisan__evil-laugh-06-gen-4.wav');
+  pasos = loadSound('assets/508708__mgc5066__steps.wav');
+  notaPianoSuspenso = loadSound('assets/648909__tusic99__reversed-piano-note-with-clean-no-reverb.wav');
+  notaPianoDross = loadSound('assets/sonidoPianoDross.mp3');
 }
 
 function setup() {
@@ -76,6 +91,35 @@ function draw() {
   
   //Maquinita de estados. Se vuelve a llamar la funcion
   maquinaEstados();
+  //sonido de lluvia
+  controlarLluvia();
+  //sonido discoteca
+  AmbienteDiscotecaSonido();
+}
+function controlarLluvia() {
+  if (estadoPantalla == 6) {
+    // Discoteca: se corta la lluvia
+    if (lluvia.isPlaying()) {
+      lluvia.stop();
+    }
+  } else if (estadoPantalla > 0) {
+    if (!lluvia.isPlaying()) {
+      lluvia.loop();
+    }
+  }
+}
+//Para que solo se escuche el ambiente de la discoteca
+function AmbienteDiscotecaSonido() {
+  if (estadoPantalla == 6) {
+    // Discoteca: suena en loop
+    if (!ambienteDiscoteca.isPlaying()) {
+      ambienteDiscoteca.loop();
+    }
+  } else {
+    if (ambienteDiscoteca.isPlaying()) {
+      ambienteDiscoteca.stop();
+    }
+  }
 }
 
 //INICIO: Funcion para todo lo que es la primera pantalla y que este ordenadito.
