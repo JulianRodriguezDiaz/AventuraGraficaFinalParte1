@@ -66,4 +66,130 @@ let nombresDepartamento = [
   "ERIC BENJAMÍN",
   "ERIC BENJAMÍN",
   "ERIC BENJAMÍN",
-  ]
+  ];
+
+//Discoteca
+let dialogoDiscoteca = [
+  "(Márquez se dirige a la discoteca, donde hay gente bailando en la pista de baile, ignorando los hechos. Va a la barra.)",
+  "(Márquez reconoce al barman Yahir, de quien se sabe que fue la última persona que vio e interactuó con la víctima.)",
+  "Buenas noches Yahir. Soy Márquez, el detective a cargo de la investigación de la muerte de Lucas. Vengo a hacerle unas preguntas.",
+  "O-Oh, buenas noches... No pensé que vendría a investigar sabiendo que el lugar está lleno de gente...",
+  "Bueno, eso no es impedimento para avanzar en la investigación. Bien, Yahir, ¿podrías contarme un poco sobre Lucas cuando vino acá?",
+  "E-este, sí... Él vino porque dijo que había encontrado otro empleo y que renunciaría. Nos quedamos conversando un poco, le di su liquidación y se fue...",
+  "Bien... ¿y no le comentó a dónde se dirigía exactamente?",
+  "E-em, no, no recuerdo que haya mencionado algo al respecto.",
+  "Entonces... ¿cómo explica que el cuerpo de Lucas haya aparecido en la bodega de este lugar si se supone que se había ido?",
+  "¡Discúlpeme, pero me ofende muchísimo que esté dudando de mí cuando le digo que no sé nada!",
+  "Además, aún no tienen muchas pistas sobre cómo lo asesinaron siquiera; ni siquiera descubrieron la pistola...",
+  "(Márquez se da cuenta de dos cosas: el nerviosismo de Yahir y que él mencionó un detalle sobre el objeto/arma utilizada sin que nadie se lo dijera.)",
+  "Tiene razón Yahir. Aún no tenemos la pista respecto al objeto o arma...",
+  "¿V-vio? Se lo dije, no tienen nada contra m-mí... Y con su permiso, seguiré trabajando.",
+  "(Yahir va a atender a dos clientes. Márquez aprovecha la información para regresar a la bodega y buscar pistas de la pistola.)"
+];
+let nombresDiscoteca = [
+  "NARRADOR",
+  "NARRADOR",
+  "MÁRQUEZ",
+  "YAHIR",
+  "MÁRQUEZ",
+  "YAHIR",
+  "MÁRQUEZ",
+  "YAHIR",
+  "MÁRQUEZ",
+  "YAHIR",
+  "YAHIR",
+  "NARRADOR",
+  "MÁRQUEZ",
+  "YAHIR",
+  "NARRADOR"
+];
+//2da Bodega
+let dialogoSegundaBodega = [
+  "Volví a la bodega... Tengo que revisar cada rincón otra vez. No se me puede escapar nada.",
+  "Estudio los detalles que pasé por alto la primera vez... ¡Acá hay algo más!",
+  "Con estas nuevas pistas, ahora sí sé exactamente hacia dónde tengo que ir."
+];
+let nombresSegundaBodega = [
+  "MÁRQUEZ",
+  "MÁRQUEZ",
+  "MÁRQUEZ"
+];
+
+//Callejon
+let dialogoCallejon = [
+  "El callejón está oscuro y silencioso. Los vidrios rotos crujen bajo los zapatos del detective.",
+  "Acá es donde las pistas de la bodega finalmente cobran sentido. Hay marcas recientes en la pared.",
+  "Las pistas finalmente me guían hasta aquí. Tendré que averiguar qué es lo que esconde este callejón tan oscuro.",
+  "(Pasos desde la oscuridad)",
+  "Je, je, je...",
+  "¿Eh? ¿Quién anda ahí?",
+  "¡TU PEOR PESADILLA!",
+  "¡DETENTE! (¡Oh, por Dios, ¿qué hago?)"
+];
+let nombresCallejon = [
+  "NARRADOR",
+  "NARRADOR",
+  "MÁRQUEZ",
+  "???",
+  "???",
+  "MÁRQUEZ",
+  "YAHIR",
+  "MÁRQUEZ"
+];
+
+//Finales
+let dialogoFinalBueno = [
+  "FINAL BUENO: Finalmente, el asesino es atrapado y llevado a juicio, donde se descubre que Yahir fue el homicida de Lucas."
+];
+let nombresFinalBueno = [
+  "NARRADOR"
+];
+let dialogoFinalMalo = [
+  "FINAL MALO: El asesino acabó con el detective; el criminal escapa impune de la escena del crimen."
+];
+let nombresFinalMalo = [
+  "NARRADOR"
+];
+
+let dialogoFinalNeutral = [
+  "FINAL NEUTRAL: El fuego consumió el almacén por completo y las pruebas quedaron reducidas a cenizas... Yahir escapa impune de la ciudad y la policía arresta a un sospechoso inocente por falta de una investigación rigurosa."
+];
+let nombresFinalNeutral = [
+  "NARRADOR"
+];
+
+//Almacen
+let dialogoAlmacen = [
+  "El almacén está oscuro y huele a humedad.",
+  "Escucho pasos al fondo... Alguien me estaba esperando."
+];
+let nombresAlmacen = [
+  "DETECTIVE",
+  "DETECTIVE"
+];
+
+let dialogoAlmacenLlamas = [
+  "¡Maldición! Mi entrada brusca activó una trampa o tiró una lámpara de queroseno.",
+  "¡El fuego se expande violentamente por todas las cajas de madera!",
+  "No hay tiempo para buscar pistas, ¡tengo que salir corriendo antes de que todo colapse!"
+];
+let nombresAlmacenLlamas = [
+  "MÁRQUEZ",
+  "NARRADOR",
+  "MÁRQUEZ"
+];
+
+let dialogoAlmacenSigiloso = [
+  "Me deslicé por la puerta trasera sin hacer el más mínimo ruido entre las sombras.",
+  "Hay alguien detrás de unas pilas de cajas; lo veo con claridad: ¡es Yahir!",
+  "Está apurado, metiendo paquetes sospechosos de sustancias ilícitas dentro de un bolso de lona.",
+  "Tengo el elemento sorpresa de mi lado. Es ahora o nunca.",
+  "¡YAHIR, ESTÁS BAJO ARRESTO POR TRÁFICO DE SUSTANCIAS Y HOMICIDIO!"
+];
+let nombresAlmacenSigiloso = [
+  "MÁRQUEZ",
+  "MÁRQUEZ",
+  "MÁRQUEZ",
+  "MÁRQUEZ",
+  "MÁRQUEZ"
+];
