@@ -99,7 +99,6 @@ function controlarLluvia() {
 //Para que solo se escuche el ambiente de la discoteca
 function AmbienteDiscotecaSonido() {
   if (estadoPantalla == 6) {
-    // Discoteca: suena en loop
     if (!ambienteDiscoteca.isPlaying()) {
       ambienteDiscoteca.loop();
     }

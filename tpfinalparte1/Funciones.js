@@ -74,3 +74,89 @@ function dibujarEscenaSegundaBodega() {
   }
   dibujarInterfazTexto(nombresSegundaBodega, dialogoSegundaBodega);
 }
+//CALLEJON OSCURO:  que mieio
+function dibujarEscenaCallejon() {
+  image(imgCallejon, 0, 0, width, height);
+  dibujarInterfazTexto(nombresCallejon, dialogoCallejon);
+}
+
+//Funcion para volver a llamar la interfaz de texto, vendria siendo literalmente todo lo que sirva pal texto xD
+function dibujarInterfazTexto(listaNombres, listaDialogos) {
+  image(imgCuadroTexto, 100, 300, 600, 150);
+  image(imgMarcoPersonaje, 110, 265, 160, 45);
+  push();
+  fill(20, 50, 60);
+  textSize(15);
+  textAlign(CENTER, CENTER);
+  text(listaNombres[indiceTexto], 110, 268, 160, 40);
+  pop();
+  fill(20, 50, 60);
+  textSize(16);
+  textAlign(LEFT, TOP);
+  
+  let textoActual = listaDialogos[indiceTexto];
+  let textoProgresivo = textoActual.substring(0, maxTexto);
+  text(textoProgresivo, 157, 330, 500, 100);
+  if (maxTexto < textoActual.length) {
+    maxTexto++;
+  }
+}
+
+//Una imagen negra que sirve para darle ese toque de suspensito
+function dibujarTransicionSuspenso(){
+  image(imgFondoNegro, 0, 0, width, height);
+}
+
+//boton de decision callejon
+function dibujarPantallaDecisionCallejon() {
+  dibujarEscenaCallejon();
+  image(imgCuadroDecision, 200, 110, 400, 160);
+  push();
+  fill(20, 50, 60);
+  textSize(14);
+  textAlign(CENTER, CENTER);
+  text("Enfrentar al atacante y defenderse", 400, 165);
+  text("Intentar huir y escapar del callejón", 400, 215);
+  pop();
+}
+function dibujarEscenaAlmacen() {
+  image(imgAlmacen, 0, 0, width, height); 
+  dibujarInterfazTexto(nombresAlmacen, dialogoAlmacen);
+}
+ 
+ function dibujarPantallaDecisionAlmacen() {
+  image(imgAlmacen, 0, 0, width, height);
+  dibujarInterfazTexto(nombresAlmacen, dialogoAlmacen);
+  image(imgCuadroDecision, 200, 110, 400, 160);
+  push();
+  fill(20, 50, 60);
+  textSize(14);
+  textAlign(CENTER, CENTER);
+  text("Entrar sigilosamente por la puerta trasera", 415, 165);
+  text("Entrar a la fuerza derribando la entrada", 415, 215);
+  pop();
+}
+
+function dibujarEscenaAlmacenLlamas() {
+  image(imgAlmacenEnLlamas, 0, 0, width, height);
+  dibujarInterfazTexto(nombresAlmacenLlamas, dialogoAlmacenLlamas);
+}
+function dibujarEscenaAlmacenSigiloso() {
+  image(imgAlmacen, 0, 0, width, height);
+  dibujarInterfazTexto(nombresAlmacenSigiloso, dialogoAlmacenSigiloso);
+}
+
+// FUNCIONES PARA LOS FINALES
+function dibujarFinalBueno() {
+  image(imgFinalBueno, 0, 0, width, height); 
+  dibujarInterfazTexto(nombresFinalBueno, dialogoFinalBueno);
+}
+
+function dibujarFinalMalo() {
+  image(imgFinalMalo, 0, 0, width, height); 
+  dibujarInterfazTexto(nombresFinalMalo, dialogoFinalMalo);
+}
+function dibujarFinalNeutral() {
+  image(imgFinalNeutral, 0, 0, width, height);
+  dibujarInterfazTexto(nombresFinalNeutral, dialogoFinalNeutral);
+}
