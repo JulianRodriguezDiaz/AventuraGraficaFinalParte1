@@ -93,23 +93,21 @@ function draw() {
 //Para que la lluvia se escuche en todos los escenarios menos en la discoteca
 function controlarLluvia() {
   if (estadoPantalla == 6) {
-    // Discoteca: se corta la lluvia
     if (lluvia.isPlaying()) {
       lluvia.stop();
     }
   } else if (estadoPantalla > 0) {
     if (!lluvia.isPlaying()) {
-      lluvia.loop();
+      lluvia.loop(); 
     }
   }
 }
 
-//Para que solo se escuche el ambiente de la discoteca
+//Para que solo se escuche el ambiente de la discoteca cuando el usuario llega a la discoteca
 function AmbienteDiscotecaSonido() {
   if (estadoPantalla == 6) {
-    // Discoteca: suena en loop
     if (!ambienteDiscoteca.isPlaying()) {
-      ambienteDiscoteca.loop();
+      ambienteDiscoteca.loop(); //
     }
   } else {
     if (ambienteDiscoteca.isPlaying()) {
