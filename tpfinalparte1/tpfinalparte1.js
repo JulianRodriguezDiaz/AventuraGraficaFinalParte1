@@ -29,8 +29,17 @@ let indiceTexto = 0;
 // Esto es para la maquinita de estados
 let estadoPantalla = 0;
 
-//Aca se cargan las imagenes.
+//Esto es para sonidos
+let ambienteDiscoteca;
+let lluvia;
+let risa;
+let pasos;
+let notaPianoSuspenso;
+let notaPianoDross;
+let latidos;
+
 function preload() {
+  //Aca se cargan las imagenes.
   imgInicio = loadImage('assets/start.png');
   imgFondo = loadImage('assets/fondo_ciudad.jpg');
   imgLogo = loadImage('assets/logo.png'); 
@@ -48,10 +57,20 @@ function preload() {
   imgAlmacen = loadImage('assets/fondo_almacen.png');
   imgAlmacenEnLlamas = loadImage('assets/fondo_almacen_en_llamas.png');
   imgFinalNeutral = loadImage('assets/final_neutral.jpg');
-
+  
+  //animación lluvia sprites.
   for (let i = 0; i < totalFramesLluvia; i++) {
     framesLluvia[i] = loadImage('assets/lluvia_' + i + '.png');
   }
+  
+  //Aca se cargan los sonidos.
+  ambienteDiscoteca = loadSound('assets/323255__scale75__hip-hop_liquid.wav');
+  lluvia = loadSound('assets/613852__suso_ramallo__rain-oc818.wav');
+  risa = loadSound('assets/366176__nanakisan__evil-laugh-06-gen-4.wav');
+  pasos = loadSound('assets/508708__mgc5066__steps.wav');
+  notaPianoSuspenso = loadSound('assets/648909__tusic99__reversed-piano-note-with-clean-no-reverb.wav');
+  notaPianoDross = loadSound('assets/sonidoPianoDross.mp3');
+  latidos = loadSound('assets/418866__name__heartbeat-loop.wav');
 }
 
 function setup() {
