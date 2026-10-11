@@ -1,7 +1,7 @@
 //TP#Final — Aventura Gráfica Interactiva Web [Etapa 1]
 //links videos explicativos
 //Julian Rodriguez Díaz:
-//Milagros Ana Sofia Pizzio:
+//Milagros Ana Sofia Pizzio: https://youtu.be/I7Zp-q410II
 
 let imgFondo;
 let framesLluvia = [];
