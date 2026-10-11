@@ -82,4 +82,8 @@ function draw() {
   
   //Maquinita de estados. Se vuelve a llamar la funcion
   maquinaEstados();
+  //sonido de lluvia
+  controlarLluvia();
+  //sonido discoteca
+  AmbienteDiscotecaSonido();
 }

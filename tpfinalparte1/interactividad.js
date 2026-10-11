@@ -6,24 +6,25 @@ function mousePressed() {
       maxTexto = 0;
       indiceTexto = 0;
     }
-  } 
-  else if (estadoPantalla == 1) {
-    if (mouseX > 100 && mouseX < 700 && mouseY > 300 && mouseY < 450) {
-      if (indiceTexto < dialogoOficina.length - 1) {
-        indiceTexto++;
-        maxTexto = 0;
-      } else {
-        estadoPantalla = 2;
-        maxTexto = 0;
-        indiceTexto = 0; 
-      } 
+  }else if (estadoPantalla == 1) {
+  if (mouseX > 100 && mouseX < 700 && mouseY > 300 && mouseY < 450) {
+    if (indiceTexto < dialogoOficina.length - 1) {
+      indiceTexto++;
+      maxTexto = 0;
+    } else {
+      estadoPantalla = 2;
+      maxTexto = 0;
+      indiceTexto = 0;
+      notaPianoDross.play();
     }
   }
+}
   else if (estadoPantalla == 2) {
-    estadoPantalla = 3;
-    maxTexto = 0;
-    indiceTexto = 0;
-  }
+  estadoPantalla = 3;
+  maxTexto = 0;
+  indiceTexto = 0;
+  notaPianoDross.stop();
+}
   else if (estadoPantalla == 3) {
     if (mouseX > 100 && mouseX < 700 && mouseY > 300 && mouseY < 450) {
       if (indiceTexto < dialogoBodega.length - 1) {
@@ -172,7 +173,7 @@ else if (estadoPantalla == 14) {
       estadoPantalla = 16; // final neutral
       maxTexto = 0;
       indiceTexto = 0;
+      }
     }
   }
-}
  }
