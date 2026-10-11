@@ -1,6 +1,8 @@
-//Pude hacer los botones y agregar detalles minimos, 
-//quedaria copiar y pegar llamar funciones, etc y estaria lo principal
-//dejamos sonido para lo ultimo :)
+//TP#Final — Aventura Gráfica Interactiva Web [Etapa 1]
+//links videos explicativos
+//Julian Rodriguez Díaz:
+//Milagros Ana Sofia Pizzio: 
+
 let imgFondo;
 let framesLluvia = [];
 let totalFramesLluvia = 8;
