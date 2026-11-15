@@ -5,6 +5,7 @@ class Pantallas {
   
   dibujarInstrucciones() {
     background(15);
+    textFont(tipografia);
     textAlign(CENTER, CENTER);
     noStroke();
     fill(255, 0, 51);
@@ -13,7 +14,7 @@ class Pantallas {
     
     fill(200);
     textSize(16);
-    text("Usa las flechas para moverte. Esquiva al asesino y llega al final.", width / 2, 170);
+    text("Usa las flechas para guiar al detective Márquez. Esquiva al asesino y llega al final del callejón.", width / 2, 170);
     
     // Inicio
     fill(40);

@@ -36,7 +36,7 @@ class Juego {
   reiniciar() {
     this.crearPersonaje();
     this.crearEnemigo();
-    this.estado = 1;
+    this.cambiarEstado(1);
   }
   
   crearPersonaje() {
@@ -70,12 +70,12 @@ class Juego {
     
     // Colisión con el enemigo 
     if (this.colisionaPersonajeEnemigo()) {
-      this.estado = 3;
+      this.cambiarEstado(3);
     }
     
     // Meta o salida 
     if (this.personaje.posX > 720 && this.personaje.posY > 320) {
-      this.estado = 2;
+      this.cambiarEstado(2);
     }
   }
   
@@ -91,9 +91,29 @@ class Juego {
     return px < ex + et && px + pt > ex && py < ey + et && py + pt > ey;
   }
   
+  //para que cambie de sonido en las diferentes pantallas
+  cambiarEstado(nuevoEstado) {
+  this.estado = nuevoEstado;
+
+  sonidoMenu.stop(); //para que no se superpongan los sonidos
+  sonidoJuego.stop();
+  sonidoVictoria.stop();
+  sonidoDerrota.stop();
+
+  if (nuevoEstado === 0) {
+    sonidoMenu.loop();
+  } else if (nuevoEstado === 1) {
+    sonidoJuego.loop();
+  } else if (nuevoEstado === 2) {
+    sonidoVictoria.play();
+  } else if (nuevoEstado === 3) {
+    sonidoDerrota.play();
+  }
+}
+  
   manejarClicks() {
     if (this.estado === 0 && mouseX >= 320 && mouseX <= 480 && mouseY >= 280 && mouseY <= 320) {
-      this.estado = 1;
+      this.cambiarEstado(1);
     } else if ((this.estado === 2 || this.estado === 3) && mouseX >= 320 && mouseX <= 480 && mouseY >= 280 && mouseY <= 320) {
       this.reiniciar();
     }
