@@ -33,6 +33,12 @@ class Pantallas {
       background(15);
     }
     
+    textAlign(CENTER, CENTER);
+    noStroke();
+    fill(0, 255, 102);
+    textSize(28);
+    text("¡LOGRASTE ESCAPAR!", width / 2, 120);
+    
     this.dibujarBoton("REINICIAR");
   }
   
@@ -43,6 +49,12 @@ class Pantallas {
     } else {
       background(15);
     }
+    
+    textAlign(CENTER, CENTER);
+    noStroke();
+    fill(255, 0, 51);
+    textSize(28);
+    text("EL ASESINO TE ATRAPO...", width / 2, 120);
     
     this.dibujarBoton("REINICIAR");
   }
