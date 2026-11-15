@@ -5,11 +5,12 @@
 let objJuego;
 let imgInicio;
 let imgLadrillo;
+let tipografía;
 
 function preload(){
   //imgLadrillo = loadImage("ladrillo.jpg");
   //imgInicio = loadImage("fondo_callejon.png");
- 
+ tipografía = loadFont("/assets/RomanAntique.ttf");
   
 }
 

@@ -42,21 +42,22 @@ class Juego {
   }
   
   crearEnemigo() {
-    this.enemigo = new Enemigo(400, 200);
+    this.enemigo = new Enemigo(30, 200);
   }
   
   jugar() {
     background(15);
-    fill(255);
-    textSize(12);
-    textAlign(LEFT, TOP);
-    text("¡Escapa del asesino hacia la salida (abajo a la derecha)!", 20, 10);
     
     //comienza a dibujarse el laberinto
     this.laberinto.dibujar();
     
+    fill(255);
+    textSize(16);
+    textAlign(LEFT, TOP);
+    text("¡Escapa del asesino hacia la salida del callejón(abajo a la derecha)!", 20, 10);
+    
     //se dibujo y se mueve el asesino
-    this.enemigo.mover(this.personaje.posX, this.personaje.posY);
+    this.enemigo.mover(this.personaje.posX, this.personaje.posY, this.laberinto);
     this.enemigo.dibujar();
     
     //colision con el laberinto
@@ -68,7 +69,7 @@ class Juego {
       this.estado = 3;
     }
     
-    //Meta o slida 
+    //Meta o salida 
     if (this.personaje.posX > 720 && this.personaje.posY > 320) {
       this.estado = 2;
     }

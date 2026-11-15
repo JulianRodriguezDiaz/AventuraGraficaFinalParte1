@@ -5,15 +5,16 @@ class Pantallas {
   
   dibujarInstrucciones() {
     background(15);
+    textFont(tipografía);
     textAlign(CENTER, CENTER);
     noStroke();
     fill(255, 0, 51);
     textSize(24);
-    text("ENCUENTRO EN EL CALLEJON", width / 2, 100);
+    text("ENCUENTRO EN EL CALLEJÓN", width / 2, 100);
     
     fill(200);
     textSize(16);
-    text("Usa las flechas para moverte. Essquiva al asesino y llega al finall.", width / 2, 170);
+    text("Usa las flechas para guiar al detective Márquez. Esquiva al asesino y llega al final del callejón.", width / 2, 170);
     
     // inicio
     fill(40);
