@@ -15,7 +15,7 @@ let tipografia;
 
 function preload() {
   // imgLadrillo = loadImage("ladrillo.jpg");
-  // imgInicio = loadImage("fondo_callejon.png");
+  imgInicio = loadImage("assets/fondo_callejon.png");
   imgSuelo = loadImage("assets/Suelo.png");
   tipografia = loadFont("assets/RomanAntique.ttf");
   
@@ -37,7 +37,7 @@ function preload() {
 
 function setup() {
   createCanvas(800, 400);
-  objJuego = new Juego(imgLadrillo, imgSuelo, imgDetective, imgAsesino);
+  objJuego = new Juego(imgLadrillo, imgSuelo, imgDetective, imgAsesino, imgInicio);
 }
 
 function draw() {
