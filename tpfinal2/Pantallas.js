@@ -1,60 +1,61 @@
 class Pantallas {
-  constructor() {
-    
+  constructor(imgCallejon, imgGanar, imgPerder) {
+    this.imgCallejon = imgCallejon;
+    this.imgGanar = imgGanar;
+    this.imgPerder = imgPerder;
   }
   
   dibujarInstrucciones() {
-    background(15);
+    if (this.imgCallejon) {
+      image(this.imgCallejon, 0, 0, 800, 400);
+    } else {
+      background(15);
+    }
+    
     textAlign(CENTER, CENTER);
     noStroke();
     fill(255, 0, 51);
     textSize(24);
-    text("ENCUENTRO EN EL CALLEJON", width / 2, 100);
+    text("ENCUENTRO EN EL CALLEJON", width / 2, 90);
     
-    fill(200);
+    fill(240);
     textSize(16);
-    text("Usa las flechas para moverte. Esquiva al asesino y llega al final.", width / 2, 170);
+    text("Usa las flechas para moverte. Esquiva al asesino y llega al final.", width / 2, 150);
     
-    // Inicio
-    fill(40);
-    stroke(255, 0, 51);
-    rect(320, 280, 160, 40, 5);
-    noStroke();
-    fill(255);
-    textSize(14);
-    text("INICIAR", width / 2, 300);
+    this.dibujarBoton("INICIAR");
   }
   
-  // Victoria
+  // ganar
   dibujarGanar() {
-    background(15);
-    textAlign(CENTER, CENTER);
-    noStroke();
-    fill(0, 255, 102);
-    textSize(28);
-    text("¡LOGRASTE ESCAPAR!", width / 2, 150);
-    this.dibujarBotonReiniciar();
+    if (this.imgGanar) {
+      image(this.imgGanar, 0, 0, 800, 400);
+    } else {
+      background(15);
+    }
+    
+    this.dibujarBoton("REINICIAR");
   }
   
-  // Derrota
+  // perder
   dibujarPerder() {
-    background(15);
-    textAlign(CENTER, CENTER);
-    noStroke();
-    fill(255, 0, 51);
-    textSize(28);
-    text("EL ASESINO TE ATRAPO...", width / 2, 150);
-    this.dibujarBotonReiniciar();
+    if (this.imgPerder) {
+      image(this.imgPerder, 0, 0, 800, 400);
+    } else {
+      background(15);
+    }
+    
+    this.dibujarBoton("REINICIAR");
   }
   
-  // Reinicio
-  dibujarBotonReiniciar() {
-    fill(40);
+   //boton
+  dibujarBoton(etiqueta) {
+    fill(40, 200); 
     stroke(255, 0, 51);
     rect(320, 280, 160, 40, 5);
     noStroke();
     fill(255);
     textSize(14);
-    text("REINICIAR", width / 2, 300);
+    textAlign(CENTER,CENTER);
+    text(etiqueta, width / 2, 300);
   }
 }
