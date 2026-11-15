@@ -32,9 +32,7 @@ class Pantallas {
     } else {
       background(15);
     }
-    
-
-    
+    this.dibujarCreditos();
     this.dibujarBoton("REINICIAR");
   }
   
@@ -45,10 +43,20 @@ class Pantallas {
     } else {
       background(15);
     }
-    
-  
-    
+    this.dibujarCreditos();
     this.dibujarBoton("REINICIAR");
+  }
+  
+  // créditos
+  dibujarCreditos() {
+    fill(0, 160);
+    noStroke();
+    rect(0, 345, 800, 40);
+
+    fill(240);
+    textSize(14);
+    textAlign(CENTER, CENTER);
+    text("Créditos: Julian Rodríguez Díaz y Milagros Ana Sofia Pizzio", width / 2, 365);
   }
   
    //boton
