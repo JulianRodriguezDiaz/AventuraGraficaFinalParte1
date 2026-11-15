@@ -1,6 +1,8 @@
 //TP#Final — Video Juego Web [Etapa 2]
 
 let objJuego;
+let imgGanar;
+let imgPerder;
 let imgInicio;
 let imgLadrillo;
 let imgDetective = [];
@@ -16,8 +18,11 @@ let tipografia;
 function preload() {
   // imgLadrillo = loadImage("ladrillo.jpg");
   imgInicio = loadImage("assets/fondo_callejon.png");
+  imgGanar = loadImage("assets/ganar.jpg");
+  imgPerder = loadImage("assets/perder.jpg");
   imgSuelo = loadImage("assets/Suelo.png");
   tipografia = loadFont("assets/RomanAntique.ttf");
+  
   
   // Detective
   imgDetective[0] = loadImage("assets/detective_0.png");
@@ -37,7 +42,7 @@ function preload() {
 
 function setup() {
   createCanvas(800, 400);
-  objJuego = new Juego(imgLadrillo, imgSuelo, imgDetective, imgAsesino, imgInicio);
+  objJuego = new Juego(imgLadrillo, imgSuelo, imgDetective, imgAsesino, imgInicio, imgGanar, imgPerder);
 }
 
 function draw() {
