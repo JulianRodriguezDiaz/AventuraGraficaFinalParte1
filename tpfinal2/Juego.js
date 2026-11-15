@@ -1,5 +1,5 @@
 class Juego {
-  constructor(ladrillo, suelo, det, asesino) {
+  constructor(ladrillo, suelo, det, asesino, callejon, ganar, perder) {
     this.estado = 0; 
     this.personaje = null;
     this.enemigo = null;
@@ -8,8 +8,12 @@ class Juego {
     this.imgSuelo = suelo; 
     this.imgDetective = det;
     this.imgAsesino = asesino;
+    this.imgCallejon = callejon;
+    this.imgGanar = ganar;
+    this.imgPerder = perder;
       
-    this.pantallas = new Pantallas();
+
+    this.pantallas = new Pantallas(this.imgCallejon, this.imgGanar, this.imgPerder);
     this.iniciar();
   }
   
@@ -48,32 +52,30 @@ class Juego {
   }
   
   jugar() {
-    // El fondo negro o plano ya no hace falta porque el laberinto dibuja el suelo de fondo[cite: 5]
-    
-    // Laberinto (dibuja el suelo y las paredes)
+    //Laberinto 
     this.laberinto.dibujar();
     
-    // Texto de ayuda superior
+    //texto de ayuda
     fill(255);
     noStroke();
     textSize(12);
     textAlign(LEFT, TOP);
-    text("¡Escapa del asesino hacia la salida (abajo a la derecha)!", 20, 10);
+    text("¡Escapa del asesino hacia la salida abajo a la derecha!", 20, 10);
     
-    // Enemigo
+   //Enemigo
     this.enemigo.mover(this.personaje.posX, this.personaje.posY);
     this.enemigo.dibujar();
     
-    // Personaje
+   //personaje
     this.personaje.mover(this.laberinto);
     this.personaje.dibujar();
     
-    // Colisión con el enemigo 
+    // colision enemigo
     if (this.colisionaPersonajeEnemigo()) {
       this.cambiarEstado(3);
     }
     
-    // Meta o salida 
+    // salida
     if (this.personaje.posX > 720 && this.personaje.posY > 320) {
       this.cambiarEstado(2);
     }
