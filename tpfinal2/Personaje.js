@@ -55,7 +55,7 @@ class Personaje {
       }
     }
 
-    // Si se está moviendo, avanzamos el contador de animación lentamente
+    
     if (movido) {
       this.animacion += 0.15;
     }
