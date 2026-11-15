@@ -6,7 +6,6 @@ class Juego {
     this.laberinto = null;
     this.imgLadrillo = imgLadrillo;
     
-   
     this.pantallas = new Pantallas();
     
     this.iniciar();

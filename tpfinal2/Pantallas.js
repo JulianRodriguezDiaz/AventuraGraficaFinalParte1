@@ -1,6 +1,5 @@
 class Pantallas {
-  constructor() {
-    
+  constructor() { 
   }
   
   dibujarInstrucciones() {

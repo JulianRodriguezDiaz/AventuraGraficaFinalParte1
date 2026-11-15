@@ -12,7 +12,7 @@ class Enemigo {
     rect(this.posX, this.posY, this.tam, this.tam);
   }
   
-  mover(posXPersonaje, posYPersonaje, laberinto) {
+  mover(posXPersonaje, posYPersonaje, laberinto) { //persigue al personaje y se colisiona con las paredes
     if (this.posX < posXPersonaje) {
       this.posX += this.velocidad;
       if(laberinto.colisionaRect(this.posX, this.posY, this.tam, this.tam)){

@@ -22,14 +22,12 @@ class Laberinto {
     this.agregarPared(0, 0, 20, 400);    
     this.agregarPared(780, 0, 20, 340);
     
- 
     for (let i = 0; i < 4; i++) {
       let posX = 150 + (i * 150);
       this.agregarPared(posX, 100, 30, 200);
     }
   }
   
-
   agregarPared(posX, posY, ancho, alto) {
     this.x.push(posX);
     this.y.push(posY);

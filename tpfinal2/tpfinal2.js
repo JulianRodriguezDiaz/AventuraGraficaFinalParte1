@@ -6,12 +6,15 @@ let objJuego;
 let imgInicio;
 let imgLadrillo;
 let tipografía;
+let sonidoMenú;
+let sonidoJuego;
+let sonidoVictoria;
+let sonidoDerrota;
 
 function preload(){
   //imgLadrillo = loadImage("ladrillo.jpg");
   //imgInicio = loadImage("fondo_callejon.png");
  tipografía = loadFont("/assets/RomanAntique.ttf");
-  
 }
 
 function setup() {
